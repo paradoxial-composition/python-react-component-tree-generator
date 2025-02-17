@@ -97,3 +97,62 @@ You can visualize the generated tree using **Markmap**:
 
 This project is open-source and available under the **MIT License**.
 
+## Example
+
+Used on a small personal [Pokedex](https://github.com/paradoxial-composition/pokedex-app) react-native project
+
+### Result 
+
+```
+---
+title: Component Tree
+markmap:
+  colorFreezeLevel: 4
+---
+
+## HomeScreen
+
+- HomeScreen
+  - HomeScreenProps
+  - RootStackParamList
+  - SearchScreen
+    - Loader
+    - SearchScreenProps
+  - Separator
+
+## PokeDetails
+
+- PokeDetails
+  - DetailsBody
+    - AbilityDisplay
+      - AbilityData
+      - AbilityDisplayProps
+    - DetailsBodyProps
+    - Separator
+    - Sprites
+      - Separator
+      - SpritesProps
+  - DetailsHeader
+    - DetailHeaderProps
+    - ItemDisplay
+      - ItemData
+      - ItemDisplayProps
+    - Separator
+  - PokeListProps
+
+## PokeList
+
+- PokeList
+  - CardContainer
+    - Card
+      - CardProps
+    - CardContainerProps
+    - CardPlaceholder
+      - Loader
+    - Pokemon
+  - Loader
+  - PokeListProps
+  - PokemonItem
+```
+
+![markmapExample](./example.png)
