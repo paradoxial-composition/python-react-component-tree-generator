@@ -22,7 +22,7 @@ Run the script from your terminal:
 python generate_component_tree.py [project_directory] [options]
 ```
 
-### Options:
+### Options
 
 | Flag             | Description                                                                             |
 | ---------------- | --------------------------------------------------------------------------------------- |
@@ -31,27 +31,27 @@ python generate_component_tree.py [project_directory] [options]
 | `--project-only` | If set, only includes components defined within the project (ignores external ones)     |
 | `--in`           | List of specific directories to analyze (e.g., `--in ./src/components ./src/pages`)     |
 
-### Example Usage:
+### Example Usage
 
-#### Scan the entire project:
+#### Scan the entire project
 
 ```sh
 python generate_component_tree.py ./my-react-app
 ```
 
-#### Ignore external libraries (e.g., `react-bootstrap` and `antd`):
+#### Ignore external libraries (e.g., `react-bootstrap` and `antd`)
 
 ```sh
 python generate_component_tree.py ./my-react-app --ignore-libs react-bootstrap antd
 ```
 
-#### Only include project-defined components:
+#### Only include project-defined components
 
 ```sh
 python generate_component_tree.py ./my-react-app --project-only
 ```
 
-#### Limit analysis to specific directories:
+#### Limit analysis to specific directories
 
 ```sh
 python generate_component_tree.py ./my-react-app --in ./src/components ./src/pages
@@ -85,10 +85,13 @@ markmap:
 You can visualize the generated tree using **Markmap**:
 
 1. Install Markmap globally (if not already installed):
+
    ```sh
    npm install -g markmap-cli
    ```
+
 2. Open the file in a Markmap viewer:
+
    ```sh
    markmap componentsTree.mm.md
    ```
@@ -99,11 +102,15 @@ This project is open-source and available under the **MIT License**.
 
 ## Example
 
-Used on a small personal [Pokedex](https://github.com/paradoxial-composition/pokedex-app) react-native project
+Used on a small personal [Pokedex](https://github.com/paradoxial-composition/pokedex-app) react-native project:
 
-### Result 
+  ```bash
+  python3 react-component-tree-generator.py ../pokedex-app --in ../pokedex-app/src/components ../pokedex-app/src/screens --ignore-libs react-native
+  ```
 
-```
+### Result
+
+```bash
 ---
 title: Component Tree
 markmap:
